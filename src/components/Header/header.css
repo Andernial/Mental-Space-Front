@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'FallIsComing';
+    src: url(./fonts/FallIsComingRegular-Mx9B.ttf);
+}
+
+*{
+  font-family: 'FallIsComing';
+}
+
 .main-header {
     display: flex;
     align-items: center;
@@ -22,7 +31,8 @@
 }
 
 .main-title {
-    font-size: 20px;
+    margin-top: 7px;
+    font-size: 30px;
 }
 
 .full-logo {
@@ -85,7 +95,7 @@
 
 .nav-ul>li {
     padding: 10px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     border-bottom: 1px solid black;
 
 }
@@ -124,7 +134,7 @@
     border: none;
     padding: 10px;
     border-radius: 5px;
-    font-size: 17px;
+    font-size: 1.7rem;
     transition: 1s ease-in-out;
 
 }
@@ -141,7 +151,7 @@
     border: none;
     padding: 10px;
     border-radius: 5px;
-    font-size: 17px;
+    font-size: 1.7rem;
     transition: 1s ease-in-out;
 }
 

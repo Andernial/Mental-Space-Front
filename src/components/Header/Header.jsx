@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './header.css'
 
 export function Header({ link1, link2, link3, a1, a2, a3, img, iconButton }) {
@@ -30,9 +31,9 @@ export function Header({ link1, link2, link3, a1, a2, a3, img, iconButton }) {
                     
                            <nav className='nav-header'>
                         <ul className='nav-ul' >
-                            <li><a href={link1} className='nav-link'>{a1}</a></li>
-                            <li><a href={link2} className='nav-link'>{a2}</a></li>
-                            <li><a href={link3} className='nav-link'>{a3}</a></li>
+                            <li> <Link to={link1} className='nav-link'>{a1}</Link> </li>
+                            <li> <Link to={link2} className='nav-link'>{a2}</Link> </li>
+                            <li> <Link to={link3} className='nav-link'>{a3}</Link> </li>
                         </ul>
                              <button id='login'>Login</button>
                              <button id='cadastro'>Cadastro</button>
