@@ -3,6 +3,8 @@
     src: url(./fonts/FallIsComingRegular-Mx9B.ttf);
 }
 
+
+
 *{
   font-family: 'FallIsComing';
 }
@@ -56,10 +58,12 @@
     transform: translateY(-20px); /* Deslocamento inicial para cima */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     opacity: 0;
+    
 
 }
 
 .main-nav.open {
+   
     opacity: 1; /* Mostra a navegação ao definir a opacidade para 1 */
     transform: translateY(0);
    

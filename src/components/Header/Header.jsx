@@ -1,15 +1,25 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 import './header.css'
 
 export function Header({ link1, link2, link3, a1, a2, a3, img, iconButton }) {
 
     const [navOpen, setNavOpen] = useState(false)
+    const navigate = useNavigate()
 
     function handleNavOpen(){
 
         setNavOpen(!navOpen)
 
+    }
+
+    function handleLogin(){
+        navigate("/Login")
+        setNavOpen(!navOpen)
+    }
+
+    function handleCadastro(){
+        navigate("/Cadastro")
     }
 
     return (
@@ -27,21 +37,21 @@ export function Header({ link1, link2, link3, a1, a2, a3, img, iconButton }) {
             </div>
 
             <div className={`main-nav ${navOpen ? 'open' : ''}`}>
-             
+                     {navOpen && (
                     
                            <nav className='nav-header'>
                         <ul className='nav-ul' >
-                            <li> <Link to={link1} className='nav-link'>{a1}</Link> </li>
+                            <li> <Link to={link1} className='nav-link' onClick={handleNavOpen}>{a1}</Link> </li>
                             <li> <Link to={link2} className='nav-link'>{a2}</Link> </li>
                             <li> <Link to={link3} className='nav-link'>{a3}</Link> </li>
                         </ul>
-                             <button id='login'>Login</button>
+                             <button id='login' onClick={handleLogin}>Login</button>
                              <button id='cadastro'>Cadastro</button>
                         </nav>
                     
 
 
-               
+                    )}
             </div>
         </header>
     )
