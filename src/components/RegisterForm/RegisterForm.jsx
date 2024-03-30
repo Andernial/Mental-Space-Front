@@ -2,11 +2,16 @@
 
 import "./registerForm.css"
 
-export function LoginForm(){
+export function RegisterForm(){
     return(
-        <div className="container-login">
-            <div className="login-register-container">
+        <div className="container-register">
+            <div className="register-container-add">
                 <form >
+                <div className="input">
+                        <label>Nome de Usuario</label>
+                        <input type="text" name="userName" />
+                    </div>
+
                     <div className="input">
                         <label>Email</label>
                         <input type="text" name="email" />
@@ -19,7 +24,7 @@ export function LoginForm(){
                     </div>
 
                     <div className="send">
-                        <input type="submit" value='login' className="button-submit" />
+                        <input type="submit" value='Register' className="button-submit" />
                     </div>
 
                 </form>
