@@ -44,14 +44,19 @@
 }
 
 .nav-link {
+    font-size: 1.9rem;
     text-decoration: none;
     color: black;
     font-weight: bold;
+   
 
 }
 
 
+
+
 .main-nav {
+    visibility: hidden;
     background-color: white;
     width: 100%;
     max-height: 0;
@@ -63,10 +68,10 @@
 }
 
 .main-nav.open {
-   
+    visibility: visible;
     opacity: 1; /* Mostra a navegação ao definir a opacidade para 1 */
     transform: translateY(0);
-   
+  
     
   }
 
@@ -97,11 +102,17 @@
 
 }
 
-.nav-ul>li {
+.nav-li {
     padding: 10px;
     font-size: 1.5rem;
     border-bottom: 1px solid black;
+    text-shadow: 1px 1px 2px black;
+    transition: 0.5s ease-in-out
+}
 
+.nav-li:hover{
+    border-bottom: 1px solid rgb(241, 193, 193);
+    text-shadow: 1px 1px 2px rgb(241, 193, 193);
 }
 
 .nav-button {
@@ -113,6 +124,10 @@
     border-radius: 50%;
     transition: 0.5s ease-in-out;
 }
+
+.nav-button:hover{
+    cursor: pointer;
+    }
 
 .nav-button.open {
     background-color: rgb(221, 217, 217);
@@ -162,4 +177,9 @@
 #cadastro:hover{
     background-color: rgb(188, 103, 188);
     cursor: pointer;
+}
+
+#mensagens-link{
+    color: aqua;
+  
 }
