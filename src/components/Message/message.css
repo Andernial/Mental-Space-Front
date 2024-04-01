@@ -1,0 +1,46 @@
+.message-post{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px black;
+}
+
+.message-content{
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.author-post{
+    font-size: 2.2rem;
+  
+}
+
+.message-text{
+    text-align: center;
+    font-size: 2rem;
+    text-overflow: ellipsis;
+}
+
+.icon-heart{
+    width: 30px;
+    height: 30px;
+}
+
+.carrega-mensagens{
+    width: 150px;
+    padding: 5px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(223, 218, 218);
+    transition: 1s ease-in-out;
+}
+
+.carrega-mensagens:hover{
+    background-color: rgb(161, 159, 159);
+    cursor: pointer;
+}

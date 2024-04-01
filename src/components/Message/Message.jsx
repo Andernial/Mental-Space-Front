@@ -1,52 +1,68 @@
-import { useState } from "react"
-import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
-import { CheckLikeInDataBase } from "../../utils/ChekUserLike"
+import { useEffect, useState } from "react"
+// import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
+// import { CheckLikeInDataBase } from "../../utils/ChekUserLike"
+import { FetchApiData } from "../../utils/Request";
+
+import './message.css'
 
 
 export function MessagePost({icon,iconfull}){
-    // const [message, setMessage] = useState([])
-    const [likeMessage, setLikeMessage] = useState('')
+   const [messages, setMessage] = useState([])
+    // const [likes, setLikes] = useState({});
+    // const useHeader = useAuthHeader('auth.token')
     
-    const useHeader = useAuthHeader('auth.token')
+    useEffect(() =>{
 
-    async function checkLike(){
-        try {
-            console.log()
-            const hasLiked = await CheckLikeInDataBase(useHeader, 2)
-       
-            console.log(hasLiked)
-            setLikeMessage(hasLiked ? 'Você curtiu este post!' : 'Você não curtiu este post ainda.');
-        } catch (error) {
-            console.error('Erro ao verificar o like:', error);
-        }
-       
       
-      
+        loadMessage()
+    },[])
+
+    async function loadMessage(){
+        const response = await FetchApiData('get',`http://localhost:3000/Messages/mensagemsDeApoio`)
+        const messages = response.messages
+       
+        // checkLikesForMessages(messages);
+        setMessage(messages)
     }
 
+    // const checkLikesForMessages = async (messagesData) => {
+    //     try {
+    //         const token = useHeader.replace('x-acess-token ', '');
+    //         const likesData = {};
+
+    //         for (const msg of messagesData) {
+    //             const hasLiked = await CheckLikeInDataBase(token, msg.id);
+    //             likesData[msg.id] = hasLiked;
+    //         }
+
+    //         setLikes(likesData);
+    //     } catch (error) {
+    //         console.error('Erro ao verificar os likes:', error);
+    //     }
+    // }
     return(
         <>
-        <button onClick={() => {checkLike()}}> checkLike </button>
-        <div>
-                 {likeMessage}
-            </div>
-        {/* {message.map((message) => {
+      
+    
+        {messages.map((msg) => {
 
-            <div key={message.id} className="message-post">
+         return (  <div key={msg.id} className="message-post">
                 <div className="message-content">
-                <p className="author-post">{message.author}</p>
-                <p className="message-post">{message.message}</p>
+                <p className="author-post">{msg.author} :</p>
+                <p className="message-text">{msg.message}</p>
                 </div>
-                <div className="like">
-                    <img src="" alt="heart-icon" />
-                    <span>message.likes</span>
-                </div>
-            </div>
+                {/* <div className="like">
+                    {likes ? (<img src={iconfull}alt="heart-icon" className="icon-heart" />)  : ( <img src={icon} alt="heart-icon"  className="icon-heart"/>  )}
+                   
+                    <span>{msg.likes}</span>
+                </div> */}
+            </div>)
 
         }
                 
-        )} */}
+        )}
         
+                <button className="carrega-mensagens" onClick={loadMessage}>carrega mais mensagens</button>
         </>
     )
 }

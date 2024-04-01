@@ -3,11 +3,11 @@ import axios from "axios"
 
 export const FetchApiData = async(method,url,data = null, authToken = null) =>{
         try {
-          
-            const cleanToken = authToken.replace('x-acess-token ', '')
+           
+            
 
             const headers = authToken ? {
-                'x-acess-token':cleanToken
+                'x-acess-token': authToken
             } : {};
     
             console.log("Headers:", headers);

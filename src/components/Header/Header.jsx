@@ -11,6 +11,10 @@ export function Header({ link1, link2, link3, a1, a2, a3, img, iconButton, pathL
 
     const [navOpen, setNavOpen] = useState(false)
 
+    //
+
+    
+
     const isAuth = useIsAuthenticated()
     const signOut = useSignOut()
 
@@ -70,8 +74,8 @@ export function Header({ link1, link2, link3, a1, a2, a3, img, iconButton, pathL
                     ) :
 
                         <>
-                            <p>AMOGUS</p>
-                            <button id='cadastro' onClick={() => handleLogout()}>
+                            <p>placeholder</p>
+                            <button id='logout' onClick={() => handleLogout()}>
                                 Logout
                             </button>
 

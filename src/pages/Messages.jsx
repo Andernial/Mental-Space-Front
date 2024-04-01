@@ -3,6 +3,6 @@ import { MessagePost } from "../components/Message/Message"
 
 export const Messages = () => {
     return(
-        <PostContainer> <MessagePost /> </PostContainer>
+        <PostContainer> <MessagePost  icon='./src\assets\icons\heartEmpty.png' iconfull='./src\assets\icons\heartFull.png'   /> </PostContainer>
     )
 }

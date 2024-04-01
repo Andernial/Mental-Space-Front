@@ -3,4 +3,24 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+   
+   
+    
+   
+
+}
+
+.posts{
+   display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-direction: column;
+    height: 300px;
+    width: 250px;
+    margin-top: 5rem;
+   gap: 10px;
+   border: 1px black;
+   padding: 5px;
 }
