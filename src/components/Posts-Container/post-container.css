@@ -1,26 +1,35 @@
-.post-container{
+.post-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
-   
-   
-    
-   
 
 }
 
-.posts{
-   display: flex;
+.posts {
+    display: flex;
     align-items: center;
     overflow-x: hidden;
     overflow-y: scroll;
     flex-direction: column;
     height: 300px;
     width: 250px;
-    margin-top: 5rem;
-   gap: 10px;
-   border: 1px black;
-   padding: 5px;
+    gap: 10px;
+    border: 1px black;
+    padding: 5px;
+    margin-top: 55px;
 }
+
+.minhas-mensagens>h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+@media (min-width: 400px) and (min-height: 800px) {
+   .posts{
+    height: 450px;
+    width: 400px;
+   }
+ }

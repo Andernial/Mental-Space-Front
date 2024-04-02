@@ -11,5 +11,14 @@
     box-shadow: 4px 3px 4px -1px black;
     z-index: 100;
     font-size: 1.2rem;
-    margin: 1rem;
+    position: fixed;
+}
+
+
+@media (min-width: 390px) and (min-height: 800px) {
+   .footer{
+    padding: 20px;
+    top: 47rem;
+   
+   }
 }

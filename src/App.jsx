@@ -14,6 +14,7 @@ import { Messages } from './pages/Messages.jsx'
 import { PrivateRoutes } from './utils/PrivateRoutes.jsx'
 // import { Outlet } from 'react-router-dom'
 import { Footer } from './components/Footer/Footer'
+import { MyMessages } from './pages/MyMessages.jsx'
 
 
 const store = createStore({
@@ -31,7 +32,7 @@ function App() {
     <AuthProvider store={store}>
     <Router>
       <div className='container'>
-        <Header link1="/Messages" link2="placeholder" link3="placeholder" a1="Mensagens" a2="placeholder" a3="placeholder" img="./src\assets\icons\brain.png" iconButton="./src\assets\icons\list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
+        <Header link1="/Messages" link2="/MyMessages" link3="placeholder" a1="Mensagens" a2="Minhas Mensagens" a3="placeholder" img="./src\assets\icons\brain.png" iconButton="./src\assets\icons\list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
         <Routes>
 
           <Route path="/" element={<Home />} />
@@ -41,6 +42,8 @@ function App() {
             <Route element={<AuthOutlet fallbackPath='/login' />}>
               
             <Route path="/Messages" element={<Messages />} />
+
+            <Route path="/Mymessages" element={<MyMessages />} />
         
             </Route>
           

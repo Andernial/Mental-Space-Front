@@ -144,6 +144,14 @@
     height: 70px;
 }
 
+.user-profile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
 
 #login {
     background-color: aquamarine;
@@ -182,6 +190,9 @@
     color: aqua;
   
 }
+#minhas-mensagens-link{
+    color: rgb(248, 105, 105);
+}
 
 #logout{
     background-color: violet;
@@ -193,3 +204,14 @@
     font-size: 1.7rem;
     transition: 1s ease-in-out;
 }
+
+#logout :hover{
+    background-color: rgb(188, 103, 188);
+    cursor: pointer;
+}
+
+/* @media (min-width: 390px) and (min-height: 800px) {
+   .main-header{
+    
+   }
+ } */

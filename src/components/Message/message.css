@@ -44,3 +44,17 @@
     background-color: rgb(161, 159, 159);
     cursor: pointer;
 }
+
+.top-side-post{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+@media (min-width: 400px) and (min-height: 800px) {
+    .message-post{
+       width: 300px;
+    }
+ }

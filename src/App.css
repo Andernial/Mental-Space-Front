@@ -11,3 +11,37 @@
   height: 100vh;
   width: 100%;
 }
+
+.minhas-mensagens{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-top: 9rem;
+}
+
+.adiciona-message-button{
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  transition: 1s ease-in-out;
+  position: fixed;
+  top: 467px;
+  width: 90px;
+  height: 90px;
+  right: 5px;
+}
+
+@media (min-width: 390px) and (min-height: 800px) {
+  .adiciona-message-button {
+    top: 655px;
+    right: 3px;
+    width: 100px;
+    height: 100px;
+}
+  .minhas-mensagens{
+    top: 50px;
+  }
+}
