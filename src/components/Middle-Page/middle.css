@@ -36,3 +36,12 @@
 .main-page-p{
     font-size: 1.7rem;
 }
+
+
+@media screen and (min-height: 100px) and (max-height: 1100px){
+
+.container-middle{
+    height: 100%;
+}
+
+}
