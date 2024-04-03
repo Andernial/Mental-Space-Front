@@ -14,6 +14,7 @@ import { Register } from './pages/Register.jsx'
 import { Messages } from './pages/Messages.jsx'
 import { Footer } from './components/Footer/Footer'
 import { MyMessages } from './pages/MyMessages.jsx'
+import list from './assets/icons/list.png'
 
 
 const store = createStore({
@@ -31,7 +32,7 @@ function App() {
     <AuthProvider store={store}>
       <Router>
         <div className='container'>
-          <Header link1="/Messages" link2="/MyMessages" a1="Mensagens" a2="Minhas Mensagens" img={logo} iconButton="/src/assets/icons/list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
+          <Header link1="/Messages" link2="/MyMessages" a1="Mensagens" a2="Minhas Mensagens" img={logo} iconButton={list} pathLogin='/Login' pathRegister="/Register" pathHome='/' />
           <Routes>
 
             <Route path="/" element={<Home />} />
