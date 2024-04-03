@@ -42,7 +42,7 @@ function App() {
 
               <Route path="/Messages" element={<Messages />} />
 
-              <Route path="/Mymessages" element={<MyMessages />} />
+              <Route path="/MyMessages" element={<MyMessages />} />
 
             </Route>
 
