@@ -29,8 +29,8 @@ export const MyMessages = () => {
         <h1>Minhas Mensagens</h1>  
       
             </div>
-            <img src="./src/assets/icons/adicionar.png" alt="" className="adiciona-message-button" onClick={openPostMenu} />
-         <PostContainer key={postContainerKey}> <MessagePost  icon='./src\assets\icons\heartEmpty.png' iconfull='./src\assets\icons\heartFull.png'  authtoken={cleanToken} url='my-messages' iconx='./src/assets/icons/close.png' /> </PostContainer>
+            <img src="/src/assets/icons/adicionar.png" alt="" className="adiciona-message-button" onClick={openPostMenu} />
+         <PostContainer key={postContainerKey}> <MessagePost  icon='./src\assets\icons\heartEmpty.png' iconfull='/src/assets/icons/heartFull.png'  authtoken={cleanToken} url='my-messages' iconx='/src/assets/icons/close.png' /> </PostContainer>
        </>
        
 

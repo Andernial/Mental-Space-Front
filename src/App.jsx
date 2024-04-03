@@ -30,7 +30,7 @@ function App() {
     <AuthProvider store={store}>
     <Router>
       <div className='container'>
-        <Header link1="/Messages" link2="/MyMessages"  a1="Mensagens" a2="Minhas Mensagens" img="./src\assets\icons\brain.png" iconButton="./src\assets\icons\list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
+        <Header link1="/Messages" link2="/MyMessages"  a1="Mensagens" a2="Minhas Mensagens" img="/src/assets/icons/brain.png" iconButton="/src/assets/icons/list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
         <Routes>
 
           <Route path="/" element={<Home />} />
@@ -49,7 +49,7 @@ function App() {
 
         </Routes>
 
-        <Footer icon='./src\assets\icons\list.svg' />
+        <Footer icon='/src/assets\icons\list.svg' />
       </div>
     </Router>
     
