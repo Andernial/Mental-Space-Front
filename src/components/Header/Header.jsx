@@ -12,7 +12,7 @@ import './header.css'
 
 
 
-export function Header({ link1, link2, link3, a1, a2, a3, img, iconButton, pathLogin, pathRegister, pathHome }) {
+export function Header({ link1, link2, a1, a2, img, iconButton, pathLogin, pathRegister, pathHome }) {
 
     const [navOpen, setNavOpen] = useState(false)
         
@@ -40,7 +40,7 @@ export function Header({ link1, link2, link3, a1, a2, a3, img, iconButton, pathL
    async function handleLogout() {
         try {
             const token = useHeader.replace('x-acess-token ', '')
-            await FetchApiData('get',`http://localhost:3000/user/logout-user`,'',token)
+            await FetchApiData('get',`https://mental-space-api.up.railway.app/user/logout-user`,'',token)
 
             signOut()
             navigate("/Login")
@@ -76,7 +76,6 @@ export function Header({ link1, link2, link3, a1, a2, a3, img, iconButton, pathL
                     <ul className='nav-ul' >
                         <li className='nav-li'> <Link to={link1} className='nav-link' onClick={handleNavOpen} id='mensagens-link'>{a1}</Link> </li>
                         <li className='nav-li'> <Link to={link2} className='nav-link' onClick={handleNavOpen} id='minhas-mensagens-link'>{a2}</Link> </li>
-                        <li className='nav-li'> <Link to={link3} className='nav-link'>{a3}</Link> </li>
                     </ul>
 
                     {!isAuth ? (

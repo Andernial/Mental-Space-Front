@@ -1,11 +1,11 @@
-.container-register{
+.container-register {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.register-container-add{
+.register-container-add {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,20 +17,19 @@
     width: 200px;
     font-size: 2.5rem;
     margin-top: 10px
-
 }
 
-.input{
+.input {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 10px;
-   
+
 
 }
 
-.input > input {
+.input>input {
     width: 150px;
     height: 1.5rem;
     font-size: 2.5rem;
@@ -38,15 +37,15 @@
 
 
 
-.send{
+.send {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    
+
 }
 
-.button-submit{
+.button-submit {
     width: 150px;
     padding: 5px;
     font-size: 1.7rem;
@@ -56,23 +55,23 @@
     transition: 1s ease-in-out;
 }
 
-.button-submit:hover{
+.button-submit:hover {
     background-color: rgb(161, 159, 159);
     cursor: pointer;
 }
 
-.error-input-register{
+.error-input-register {
     font-size: 1.5rem;
     margin-top: 10px;
     color: red;
     text-align: center;
 }
 
-.sucess-register{
+.sucess-register {
     font-size: 2rem;
 }
 
-.register-message-p{
+.register-message-p {
     font-size: 2rem;
     text-align: center;
 }

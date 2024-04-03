@@ -33,7 +33,7 @@ export function RegisterForm() {
         const userInfo = { name, email, password }
         try {
             await validation.validate(userInfo, { abortEarly: false })
-            const result = await FetchApiData('post', 'http://localhost:3000/user/create-user', userInfo)
+            const result = await FetchApiData('post', 'https://mental-space-api.up.railway.app/user/create-user', userInfo)
 
 
             // setError(false)

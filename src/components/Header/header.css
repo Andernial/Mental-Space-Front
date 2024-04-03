@@ -5,8 +5,8 @@
 
 
 
-*{
-  font-family: 'FallIsComing';
+* {
+    font-family: 'FallIsComing';
 }
 
 .main-header {
@@ -47,7 +47,7 @@
     text-decoration: none;
     color: black;
     font-weight: bold;
-   
+
 
 }
 
@@ -56,26 +56,26 @@
 
 .main-nav {
     visibility: hidden;
-    transform: translateY(-20px); 
+    transform: translateY(-20px);
     opacity: 0;
     width: 100%;
-   height: 0;
-   transition: opacity 0.3s ease-in, transform 0.3s ease-in-out;
+    height: 0;
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in-out;
 
 }
 
-.main-nav.open{
-   
+.main-nav.open {
+
     visibility: visible;
     opacity: 2;
     height: 0;
     transform: translateY(0);
- 
+
 }
 
 
 .nav-header {
- 
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,7 +85,7 @@
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
-  
+
 
 }
 
@@ -109,7 +109,7 @@
     transition: 0.5s ease-in-out
 }
 
-.nav-li:hover{
+.nav-li:hover {
     border-bottom: 1px solid rgb(241, 193, 193);
     text-shadow: 1px 1px 2px rgb(241, 193, 193);
 }
@@ -124,14 +124,14 @@
     transition: 0.5s ease-in-out;
 }
 
-.nav-button:hover{
+.nav-button:hover {
     cursor: pointer;
-    }
+}
 
 .nav-button.open {
     background-color: rgb(221, 217, 217);
-    
-    
+
+
 }
 
 .img-button {
@@ -144,7 +144,11 @@
     height: 70px;
 }
 
-.user-profile{
+.logo-img:hover {
+    cursor: pointer;
+}
+
+.user-profile {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -165,7 +169,7 @@
 
 }
 
-#login:hover{
+#login:hover {
     background-color: rgb(97, 193, 161);
     cursor: pointer;
 }
@@ -181,20 +185,21 @@
     transition: 1s ease-in-out;
 }
 
-#cadastro:hover{
+#cadastro:hover {
     background-color: rgb(188, 103, 188);
     cursor: pointer;
 }
 
-#mensagens-link{
+#mensagens-link {
     color: aqua;
-  
+
 }
-#minhas-mensagens-link{
+
+#minhas-mensagens-link {
     color: rgb(248, 105, 105);
 }
 
-#logout{
+#logout {
     background-color: violet;
     width: 60%;
     text-align: center;
@@ -205,7 +210,7 @@
     transition: 1s ease-in-out;
 }
 
-#logout :hover{
+#logout:hover {
     background-color: rgb(188, 103, 188);
     cursor: pointer;
 }
@@ -215,3 +220,67 @@
     
    }
  } */
+
+@media screen and (min-width: 1024px) and (min-height: 628px) {
+
+    .main-header {
+        flex-direction: row;
+        height: 97px;
+        padding: 10px
+    }
+
+    .nav-header {
+        flex-direction: row;
+        background-color: unset;
+        padding: 0;
+        margin-top: 5px;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .main-nav {
+        visibility: visible;
+        opacity: 1;
+        height: 42px;
+        transform: none;
+        height: unset;
+    }
+
+    .main-nav.open{
+        height: unset;
+        transform: none;
+    }
+
+    .nav-header>ul {
+        flex-direction: row;
+    }
+
+    .nav-li {
+        text-align: center;
+        width: 146px;
+        border-bottom: none;
+    }
+
+    .nav-li:hover{
+        border-bottom: none;
+    }
+
+    .nav-link {
+        font-size: 1.8rem;
+    }
+
+
+    .user-profile{
+        font-size: 2rem;
+    }
+
+    .user-profile>p {
+
+        width: 139px;
+
+    }
+
+
+}

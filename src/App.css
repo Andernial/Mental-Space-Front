@@ -1,18 +1,18 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  background: linear-gradient(180deg, rgba(251,204,204,1) 0%, rgba(250,230,251,1) 23%);
+  align-items: center;
+  background: linear-gradient(180deg, rgba(251, 204, 204, 1) 0%, rgba(250, 230, 251, 1) 23%);
   height: 100vh;
   width: 100%;
 }
 
-.minhas-mensagens{
+.minhas-mensagens {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@
   margin-top: 9rem;
 }
 
-.adiciona-message-button{
+.adiciona-message-button {
   text-align: center;
   border: none;
   border-radius: 5px;
@@ -32,16 +32,118 @@
   width: 90px;
   height: 90px;
   right: 5px;
+  z-index: 1000;
 }
 
-@media (min-width: 390px) and (min-height: 800px) {
+.adiciona-message-button:hover{
+  cursor: pointer;
+}
+
+/* celulares grandes */
+@media (min-width: 390px) and (max-height: 950px) and (max-width: 500px) {
   .adiciona-message-button {
     top: 655px;
     right: 3px;
     width: 100px;
     height: 100px;
+  }
+
+  .minhas-mensagens {
+    top: 30px;
+  }
 }
-  .minhas-mensagens{
+
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+  .minhas-mensagens {
+    top: 600px;
+  }
+
+  .adiciona-message-button {
+    right: 455px;
+    top: 500px;
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+/* pcs pequenos */
+@media screen and (min-width: 1024px) and (max-width: 1400px) and (max-height: 628px) {
+  .adiciona-message-button {
+    right: 200px;
+    top: 462px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .minhas-mensagens {
+    top: 15px;
+  }
+
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) and (min-height: 700px) {
+  .adiciona-message-button {
+    right: 200px;
+    top: 462px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .minhas-mensagens {
+    top: 25px;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 1400px) and (max-width: 1700px) and (min-height: 700px) and (max-height:899px) {
+  .adiciona-message-button {
+    right: 410px;
+    top: 455px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .minhas-mensagens {
+    top: 35px;
+  }
+
+}
+
+
+@media screen and (min-width: 1710px) and (max-width: 2000px) {
+  .adiciona-message-button {
+    right: 410px;
+    top: 600px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .minhas-mensagens {
     top: 50px;
+  }
+
+}
+
+
+
+
+
+/* celulares pequenos */
+@media (min-width: 320px) and (max-height: 667px) and (max-width: 320px) {
+  .adiciona-message-button {
+    top: 454px;
+    right: 3px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .minhas-mensagens {
+    top: 5px;
   }
 }

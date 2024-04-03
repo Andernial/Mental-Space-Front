@@ -1,4 +1,4 @@
-.write-box-container-open {
+.editing-container {
     visibility: visible;
     display: flex;
     justify-content: center;
@@ -11,17 +11,10 @@
     z-index: 1000;
     opacity: 1;
     transition: 0.5s ease-in-out;
+    top: 0;
 }
 
-.write-box-container {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-}
-
-
-.message-box {
-
+.edit-box {
     display: flex;
     display: flex;
     justify-content: center;
@@ -36,19 +29,19 @@
     transition: 1s ease-in-out;
 }
 
-.write-message {
-    font-size: 2.3rem;
-}
 
-.form-message {
+.edit-form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
+
 }
 
-.send-message {
+
+
+.edit-message{
     background-color: rgb(152, 238, 130);
     width: 60%;
     text-align: center;
@@ -59,30 +52,8 @@
     transition: 1s ease-in-out;
 }
 
-.send-message:hover {
-    cursor: pointer;
-    background-color: rgb(117, 183, 100);
-}
 
-.error-create-message {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: red;
-    text-align: center;
-}
-
-.sucess-message {
-    font-size: 1.8rem;
-    margin-top: 10px;
-    color: rgb(107, 248, 112);
-    text-align: center;
-}
-
-textarea {
-    resize: none;
-}
-
-#textarea-write-post {
+#message-edit {
     font-size: 1.9rem;
     height: 100px;
     padding: 10px;

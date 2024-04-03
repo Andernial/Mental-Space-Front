@@ -3,15 +3,10 @@ import useAuthUser from 'react-auth-kit/hooks/useAuthUser'
 import './middle.css'
 
 
-
 export function MiddlePage(){
     
     const isAuth = useIsAuthenticated()
     const authUser = useAuthUser()
-
-    
-
-    
 
     return(
         <>

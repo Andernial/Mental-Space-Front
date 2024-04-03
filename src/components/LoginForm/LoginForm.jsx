@@ -5,12 +5,8 @@ import useSignIn from 'react-auth-kit/hooks/useSignIn';
 
 import "./loginForm.css"
 
-
-
-
-
 export function LoginForm() {
-    const [error,setError] = useState(false)
+    const [error, setError] = useState(false)
 
     const loginForm = useRef(null)
     const signIn = useSignIn()
@@ -21,8 +17,8 @@ export function LoginForm() {
         const password = loginForm.current.password.value
         const userInfo = { email, password }
         try {
-            const result = await FetchApiData('post', 'http://localhost:3000/user/login-user', userInfo)
-           
+            const result = await FetchApiData('post', 'https://mental-space-api.up.railway.app/user/login-user', userInfo)
+
 
             signIn({
                 auth: {
@@ -45,11 +41,10 @@ export function LoginForm() {
 
     }
 
-
     return (
         <div className="container-login">
             {error ? (
-                     <p className="erro-login"> Erro login ou senha invalido !</p>
+                <p className="erro-login"> Erro login ou senha invalido !</p>
             ) : null}
             <div className="login-register-container">
                 <form ref={loginForm} onSubmit={handleSubmit}>

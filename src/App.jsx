@@ -11,8 +11,6 @@ import createStore from 'react-auth-kit/createStore';
 import { Login } from './pages/Login.jsx'
 import { Register } from './pages/Register.jsx'
 import { Messages } from './pages/Messages.jsx'
-import { PrivateRoutes } from './utils/PrivateRoutes.jsx'
-// import { Outlet } from 'react-router-dom'
 import { Footer } from './components/Footer/Footer'
 import { MyMessages } from './pages/MyMessages.jsx'
 
@@ -32,7 +30,7 @@ function App() {
     <AuthProvider store={store}>
     <Router>
       <div className='container'>
-        <Header link1="/Messages" link2="/MyMessages" link3="placeholder" a1="Mensagens" a2="Minhas Mensagens" a3="placeholder" img="./src\assets\icons\brain.png" iconButton="./src\assets\icons\list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
+        <Header link1="/Messages" link2="/MyMessages"  a1="Mensagens" a2="Minhas Mensagens" img="./src\assets\icons\brain.png" iconButton="./src\assets\icons\list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
         <Routes>
 
           <Route path="/" element={<Home />} />

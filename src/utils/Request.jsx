@@ -11,8 +11,6 @@ export const FetchApiData = async (method, url, data = null, authToken = null) =
             'x-acess-token': authToken
         } : {};
 
-        console.log("Headers:", headers);
-
         const response = await axios({
             method,
             url,
