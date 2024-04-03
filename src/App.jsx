@@ -14,7 +14,7 @@ import { Register } from './pages/Register.jsx'
 import { Messages } from './pages/Messages.jsx'
 import { Footer } from './components/Footer/Footer'
 import { MyMessages } from './pages/MyMessages.jsx'
-import list from './assets/icons/list.png'
+import list from './assets/icons/list.svg'
 
 
 const store = createStore({
