@@ -6,6 +6,7 @@ import { Home } from './pages/home.jsx'
 import AuthOutlet from '@auth-kit/react-router/AuthOutlet'
 import AuthProvider from 'react-auth-kit';
 import createStore from 'react-auth-kit/createStore';
+import logo from './assets/icons/brain.png'
 // import { ErrorPage } from './pages/ErrorPage.jsx'
 
 import { Login } from './pages/Login.jsx'
@@ -30,7 +31,7 @@ function App() {
     <AuthProvider store={store}>
     <Router>
       <div className='container'>
-        <Header link1="/Messages" link2="/MyMessages"  a1="Mensagens" a2="Minhas Mensagens" img="/src/assets/icons/brain.png" iconButton="/src/assets/icons/list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
+        <Header link1="/Messages" link2="/MyMessages"  a1="Mensagens" a2="Minhas Mensagens" img={logo} iconButton="/src/assets/icons/list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
         <Routes>
 
           <Route path="/" element={<Home />} />

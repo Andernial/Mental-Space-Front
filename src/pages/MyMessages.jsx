@@ -5,6 +5,7 @@ import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 import { WriteBox } from "../components/WriteMessage-Box/WriteMessageBox";
 
 
+
 export const MyMessages = () => {
     const [openPost, setPost] = useState(false)
     const [postContainerKey, setPostContainerKey] = useState(0)
@@ -30,7 +31,7 @@ export const MyMessages = () => {
       
             </div>
             <img src="/src/assets/icons/adicionar.png" alt="" className="adiciona-message-button" onClick={openPostMenu} />
-         <PostContainer key={postContainerKey}> <MessagePost  icon='./src\assets\icons\heartEmpty.png' iconfull='/src/assets/icons/heartFull.png'  authtoken={cleanToken} url='my-messages' iconx='/src/assets/icons/close.png' /> </PostContainer>
+         <PostContainer key={postContainerKey}> <MessagePost    authtoken={cleanToken} url='my-messages' iconx='/close.png' /> </PostContainer>
        </>
        
 
