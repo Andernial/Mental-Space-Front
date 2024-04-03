@@ -1,13 +1,4 @@
-@font-face {
-    font-family: 'FallIsComing';
-    src: url(./fonts/FallIsComingRegular-Mx9B.ttf);
-}
 
-
-
-* {
-    font-family: 'FallIsComing';
-}
 
 .main-header {
     display: flex;

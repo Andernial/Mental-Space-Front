@@ -1,6 +1,15 @@
+
+
+@font-face {
+  font-family: 'FallIsComing';
+  src: url(/fonts/FallIsComingRegular-Mx9B.ttf);
+}
+
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'FallIsComing';
 }
 
 .container {
