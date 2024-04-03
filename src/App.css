@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: 'FallIsComing';
   src: url(/fonts/FallIsComingRegular-Mx9B.ttf);
@@ -44,7 +42,7 @@
   z-index: 1000;
 }
 
-.adiciona-message-button:hover{
+.adiciona-message-button:hover {
   cursor: pointer;
 }
 

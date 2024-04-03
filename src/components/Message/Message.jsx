@@ -2,10 +2,12 @@ import useAuthUser from 'react-auth-kit/hooks/useAuthUser'
 import { useEffect, useState } from "react"
 import { useUnlog } from "../../utils/Unlog";
 import { FetchApiData } from "../../utils/Request";
+import { EditMessages } from '../EditMessage-box/EditBox';
 
+import pencil from "../../assets/icons/pencil.svg"
+import trash from "../../assets/icons/trash.png"
 
 import './message.css'
-import { EditMessages } from '../EditMessage-box/EditBox';
 
 
 export function MessagePost({ url, authtoken, iconx }) {
@@ -72,7 +74,7 @@ export function MessagePost({ url, authtoken, iconx }) {
             {openEditMenu ? (
                 <>
                     <img src={iconx} alt="close" className='close' onClick={handleEditMenu} />
-                    <EditMessages iconx="./src/assets/icons/close.png" message={selectedMessage.message} urlId={selectedMessage.id} />
+                    <EditMessages  message={selectedMessage.message} urlId={selectedMessage.id} />
 
 
 
@@ -86,13 +88,13 @@ export function MessagePost({ url, authtoken, iconx }) {
                     <div className="message-content">
                         <div className="top-side-post">
                             <p className="author-post">{msg.author} :</p>
-                            {msg.userid == authUser.id ? null : <img src="./src\assets\icons\pencil.svg" alt="" onClick={() => handleEditMenu(msg)}  className='pencil' />}
+                            {msg.userid == authUser.id ? null : <img src={pencil} alt="" onClick={() => handleEditMenu(msg)}  className='pencil' />}
 
                         </div>
 
                         <p className="message-text">{msg.message}</p>
                         {msg.userid == authUser.id ? null : (<div className='edit-icons'>
-                            <img src="./src/assets/icons/trash.png" alt="lixo" className='trash' onClick={() => deleteMessage(msg)} />
+                            <img src={trash} alt="lixo" className='trash' onClick={() => deleteMessage(msg)} />
                         </div>)}
 
                     </div>

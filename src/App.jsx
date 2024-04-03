@@ -17,8 +17,8 @@ import { MyMessages } from './pages/MyMessages.jsx'
 
 
 const store = createStore({
-  authName:'_auth',
-  authType:'cookie',
+  authName: '_auth',
+  authType: 'cookie',
   cookieDomain: window.location.hostname,
   cookieSecure: false
 });
@@ -29,31 +29,31 @@ function App() {
 
   return (
     <AuthProvider store={store}>
-    <Router>
-      <div className='container'>
-        <Header link1="/Messages" link2="/MyMessages"  a1="Mensagens" a2="Minhas Mensagens" img={logo} iconButton="/src/assets/icons/list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
-        <Routes>
+      <Router>
+        <div className='container'>
+          <Header link1="/Messages" link2="/MyMessages" a1="Mensagens" a2="Minhas Mensagens" img={logo} iconButton="/src/assets/icons/list.svg" pathLogin='/Login' pathRegister="/Register" pathHome='/' />
+          <Routes>
 
-          <Route path="/" element={<Home />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Register" element={<Register />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Register" element={<Register />} />
 
             <Route element={<AuthOutlet fallbackPath='/login' />}>
-              
-            <Route path="/Messages" element={<Messages />} />
 
-            <Route path="/Mymessages" element={<MyMessages />} />
-        
+              <Route path="/Messages" element={<Messages />} />
+
+              <Route path="/Mymessages" element={<MyMessages />} />
+
             </Route>
-          
-       
 
-        </Routes>
 
-        <Footer icon='/src/assets\icons\list.svg' />
-      </div>
-    </Router>
-    
+
+          </Routes>
+
+          <Footer />
+        </div>
+      </Router>
+
     </AuthProvider>
 
   )

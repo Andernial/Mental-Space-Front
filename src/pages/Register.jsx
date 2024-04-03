@@ -1,8 +1,8 @@
 
 import { RegisterForm } from "../components/RegisterForm/RegisterForm"
 
-export const Register = ( ) =>{
+export const Register = () => {
     return (
-        <RegisterForm /> 
+        <RegisterForm />
     )
 }
