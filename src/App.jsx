@@ -27,7 +27,6 @@ const store = createStore({
 
 function App() {
 
-
   return (
     <AuthProvider store={store}>
       <Router>
