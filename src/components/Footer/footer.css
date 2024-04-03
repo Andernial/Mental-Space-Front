@@ -35,10 +35,18 @@
 
 
 
-@media screen and (min-height: 1120px) and (max-height: 2000px) {
+@media screen and (min-height: 1120px) and (max-height: 2000px) and (min-width: 1020px) {
     .footer{
       top: 60rem;
     }
 
 }
 
+
+@media screen and (min-height: 1120px) and (max-height: 2000px) and (min-width: 720px) {
+
+    .footer{
+        top: 90rem;
+      }
+
+}
