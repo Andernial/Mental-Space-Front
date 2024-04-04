@@ -1,4 +1,4 @@
-# Mental-Space
+# Mental-Space - (documentação em progresso)
 
 ## Tecnologias utilizadas
 
