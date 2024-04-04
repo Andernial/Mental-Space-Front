@@ -9,4 +9,4 @@ Este é meu primeiro projeto full stack desenvolvido com react, atualmente usuar
 
 Basta se cadastrar (não ponha uma senha que você pretenda usar de verdade)
 
-para acessar o mental space: https://mental-space-jbrpjo8bc-andernials-projects.vercel.app
+para acessar o mental space: https://mental-space.vercel.app/
