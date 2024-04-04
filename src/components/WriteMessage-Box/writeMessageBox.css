@@ -85,5 +85,6 @@ textarea {
 #textarea-write-post {
     font-size: 1.9rem;
     height: 100px;
+    width: 170px;
     padding: 10px;
 }
