@@ -13,6 +13,10 @@ para acessar o mental space: https://mental-space.vercel.app/ (deploy feito com 
 
 O projeto contem um sistema de autenticação baseado em json web token, para lidar com a authenticação no front eu utilizei a biblioteca react-auth-kit que permite a facil manipulação de cookies e rotas protegidas. O projeto conta támbem com a bibliteca react-router-dom que permite a separação de rotas por rotas protegidas e algumas outras funcionalidades.
 
+publicação no linkedin:
+
+ [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/posts/anderson-carlos-dev_javascript-fullstack-react-activity-7182086984461414400-xshF?utm_source=share&utm_medium=member_desktop)
+
 ## Para Acessar O Projeto Localmente 🏠​
 
 Primeiro clone o repositorio para o diretorio que você deseja salvar utilizando o comando no terminal :
@@ -40,10 +44,6 @@ para acessar e saber mais sobre a api que eu desenvolvi : https://github.com/And
 Ainda pretendo atualizar e adicionar as outras funcionalidades da API no front, a api ainda tem diversas rotas que podem ser consumidas e apresentadas.
 
 A responsividade ainda está sendo trabalhada para alguns celulares.
-
-publicação no linkedin:
-
- [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/posts/anderson-carlos-dev_javascript-fullstack-react-activity-7182086984461414400-xshF?utm_source=share&utm_medium=member_desktop)
 
 
 **Resultados**
