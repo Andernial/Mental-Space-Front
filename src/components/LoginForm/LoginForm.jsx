@@ -1,3 +1,4 @@
+import * as Yup from 'yup'
 import { useRef, useState, } from "react"
 import { useNavigate } from "react-router-dom";
 import { FetchApiData } from "../../utils/Request"
@@ -6,7 +7,15 @@ import useSignIn from 'react-auth-kit/hooks/useSignIn';
 import "./loginForm.css"
 
 export function LoginForm() {
-    const [error, setError] = useState(false)
+    const [errors, setErrors] = useState(false)
+    const [requestError, setRequestError] = useState([])
+
+    const validation = Yup.object({
+        email: Yup.string().email('email invalido').required('Preencha Este Campo!'),
+        password: Yup.string()
+            .required('Preencha Este Campo!')
+    })
+
 
     const loginForm = useRef(null)
     const signIn = useSignIn()
@@ -17,6 +26,7 @@ export function LoginForm() {
         const password = loginForm.current.password.value
         const userInfo = { email, password }
         try {
+            await validation.validate(userInfo, { abortEarly: false })
             const result = await FetchApiData('post', 'https://mental-space-api.up.railway.app/user/login-user', userInfo)
 
 
@@ -31,11 +41,22 @@ export function LoginForm() {
                 }
 
             })
-            setError(false)
+            setErrors(false)
             navigate('/')
         } catch (error) {
-            console.error(error.message)
-            setError(true)
+            const newErrors = {}
+
+            if (error.inner) {
+                error.inner.forEach(err => {
+                    newErrors[err.path] = err.message
+                })
+
+                setRequestError([])
+
+               return setErrors(newErrors)
+            }
+            setRequestError(error.response.data)
+           
         }
 
 
@@ -43,18 +64,18 @@ export function LoginForm() {
 
     return (
         <div className="container-login">
-            {error ? (
-                <p className="erro-login"> Erro login ou senha invalido !</p>
-            ) : null}
+            
             <div className="login-register-container">
                 <form ref={loginForm} onSubmit={handleSubmit}>
                     <div className="input">
                         <label>Email</label>
+                        {errors.email && <div className='error-input-register'>{errors.email}</div>}
                         <input type="text" name="email" />
                     </div>
 
                     <div className="input">
                         <label>Senha</label>
+                        {errors.password && <div className='error-input-register'>{errors.password}</div>}
                         <input type="password" name="password" />
 
                     </div>

@@ -1,5 +1,4 @@
 import * as Yup from 'yup'
-import { useNavigate } from "react-router-dom"
 import { useRef } from "react"
 import "./registerForm.css"
 import { useState } from "react"
@@ -23,7 +22,6 @@ export function RegisterForm() {
     })
 
     const registerForm = useRef(null)
-    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
