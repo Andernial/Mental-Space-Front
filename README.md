@@ -1,8 +1,8 @@
-# Mental-Space - (documentação em progresso)
+# Mental-Space 🧠​🌌​
 
 ## Tecnologias utilizadas 👾​
 
-react + vite, react router dom lib, react auth kit lib, yup lib
+react + vite, react router dom lib, react auth kit lib, yup lib.
 
 ## Visão geral ​🧠​
 Este é meu primeiro projeto full stack desenvolvido com react, atualmente usuarios podem escrever mensagens de apoio um para os outros !
