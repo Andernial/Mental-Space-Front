@@ -37,8 +37,14 @@ Api desenvolvida com o intuito de trazer ferramentas para ajudar pessoas que sof
 para acessar e saber mais sobre a api que eu desenvolvi : https://github.com/Andernial/Mental-Space-Api
 
 ## Considerações finais📦
-Ainda pretendo atualizar e adicionar as outras funcionalidades da api no front, a api ainda tem diversas rotas que podem ser consumidas e apresentadas.
+Ainda pretendo atualizar e adicionar as outras funcionalidades da API no front, a api ainda tem diversas rotas que podem ser consumidas e apresentadas.
+
 A responsividade ainda está sendo trabalhada para alguns celulares.
+
+publicação no linkedin:
+
+ [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/posts/anderson-carlos-dev_javascript-fullstack-react-activity-7182086984461414400-xshF?utm_source=share&utm_medium=member_desktop)
+
 
 **Resultados**
 
