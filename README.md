@@ -9,7 +9,7 @@ Este é meu primeiro projeto full stack desenvolvido com react, atualmente usuá
 
 Basta se cadastrar (não ponha uma senha que você pretenda usar de verdade)
 
-para acessar o mental space: https://mental-space.vercel.app/ (deploy feito com vercel)
+para acessar o mental space: *deploy da api atingiu o limite temporario* (deploy feito com vercel) 
 
 O projeto contem um sistema de autenticação baseado em json web token, para lidar com a autenticação no front eu utilizei a biblioteca react-auth-kit que permite a fácil manipulação de cookies e rotas protegidas. O projeto conta também com a biblioteca react-router-dom que permite a separação de rotas por rotas protegidas e algumas outras funcionalidades.
 
