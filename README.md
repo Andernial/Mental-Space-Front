@@ -36,6 +36,8 @@ Por último, para acessar o projeto basta utilizar o comando:
 npm run dev
 ```
 
+Caso queira acessar a api localmente, troque as urls consumidas no código do front para a url personalizada do servidor local.
+
 ## API Utilizada Para O Projeto 🔙​
 API desenvolvida com o intuito de trazer ferramentas para ajudar pessoas que sofrem de algum tipo de problema relacionado a saúde mental.
 Para acessar e saber mais sobre a API que desenvolvi: https://github.com/Andernial/Mental-Space-Api
