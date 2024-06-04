@@ -27,7 +27,7 @@ export function LoginForm() {
         const userInfo = { email, password }
         try {
             await validation.validate(userInfo, { abortEarly: false })
-            const result = await FetchApiData('post', 'https://mental-space-api.up.railway.app/user/login-user', userInfo)
+            const result = await FetchApiData('post', 'https://mental-space-api.onrender.com/user/login-user', userInfo)
 
 
             signIn({

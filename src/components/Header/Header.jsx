@@ -40,7 +40,7 @@ export function Header({ link1, link2, a1, a2, img, iconButton, pathLogin, pathR
    async function handleLogout() {
         try {
             const token = useHeader.replace('x-acess-token ', '')
-            await FetchApiData('get',`https://mental-space-api.up.railway.app/user/logout-user`,'',token)
+            await FetchApiData('get',`https://mental-space-api.onrender.com/user/logout-user`,'',token)
 
             signOut()
             navigate("/Login")

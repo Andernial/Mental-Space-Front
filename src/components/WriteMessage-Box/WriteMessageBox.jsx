@@ -33,7 +33,7 @@ export function WriteBox({className}){
             
             try {
                 await validation.validate(messageObject, { abortEarly: false })
-                const result = await FetchApiData('post', 'https://mental-space-api.up.railway.app/Messages/create-message', message,cleanToken)
+                const result = await FetchApiData('post', 'https://mental-space-api.onrender.com/Messages/create-message', message,cleanToken)
     
                 console.log(result)
                 // setError(false)

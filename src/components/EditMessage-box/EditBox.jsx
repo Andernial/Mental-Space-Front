@@ -39,7 +39,7 @@ export function EditMessages({className,message,urlId}){
         console.log(message)
         try {
             await validation.validate(messageObject, { abortEarly: false })
-            const result = await FetchApiData('patch', `https://mental-space-api.up.railway.app/Messages/update-message/${urlId}`, message,cleanToken)
+            const result = await FetchApiData('patch', `https://mental-space-api.onrender.com/Messages/update-message/${urlId}`, message,cleanToken)
 
             console.log(result)
             // setError(false)

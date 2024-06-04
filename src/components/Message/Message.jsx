@@ -35,7 +35,7 @@ export function MessagePost({ url, authtoken, iconx }) {
     async function loadMessage() {
 
         try {
-            const response = await FetchApiData('get', `https://mental-space-api.up.railway.app/Messages/${url}`, '', authtoken)
+            const response = await FetchApiData('get', `https://mental-space-api.onrender.com/Messages/${url}`, '', authtoken)
 
             const messages = response.messages
 
