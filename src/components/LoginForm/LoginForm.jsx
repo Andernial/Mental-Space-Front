@@ -8,6 +8,7 @@ import "./loginForm.css"
 
 export function LoginForm() {
     const [errors, setErrors] = useState(false)
+    const [requestLoading, setRequestLoading] = useState(false)
     const [requestError, setRequestError] = useState([])
 
     const validation = Yup.object({
@@ -25,6 +26,7 @@ export function LoginForm() {
         const email = loginForm.current.email.value
         const password = loginForm.current.password.value
         const userInfo = { email, password }
+        setRequestLoading(true)
         try {
             await validation.validate(userInfo, { abortEarly: false })
             const result = await FetchApiData('post', 'https://mental-space-api.onrender.com/user/login-user', userInfo)
@@ -57,6 +59,8 @@ export function LoginForm() {
             }
             setRequestError(error.response.data)
            
+        }finally{
+            setRequestLoading(false)
         }
 
 
@@ -81,7 +85,7 @@ export function LoginForm() {
                     </div>
 
                     <div className="send">
-                        <input type="submit" value='login' className="button-submit" />
+                        <input type="submit" value='login' className="button-submit" disabled={requestLoading} />
                     </div>
 
                 </form>

@@ -6,6 +6,7 @@ import { FetchApiData } from "../../utils/Request"
 
 export function RegisterForm() {
     const [sucess, setSucess] = useState(false)
+    const [requestLoading, setRequestLoading] = useState(false)
     const [errors, setErros] = useState([])
     const [requestError, setRequestError] = useState([])
 
@@ -29,6 +30,7 @@ export function RegisterForm() {
         const email = registerForm.current.email.value
         const password = registerForm.current.password.value
         const userInfo = { name, email, password }
+        setRequestLoading(true)
         try {
             await validation.validate(userInfo, { abortEarly: false })
             const result = await FetchApiData('post', 'https://mental-space-api.onrender.com/user/create-user', userInfo)
@@ -52,6 +54,8 @@ export function RegisterForm() {
           
             setRequestError(error.response.data)
            
+        }finally{
+            setRequestLoading(false)
         }
 
 
@@ -91,7 +95,7 @@ export function RegisterForm() {
                             </div>
 
                             <div className="send">
-                                <input type="submit" value='register' className="button-submit" />
+                                <input type="submit" value='register' className="button-submit" disabled={requestLoading} />
                             </div>
 
                         </form>
