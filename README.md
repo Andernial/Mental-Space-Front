@@ -1,4 +1,4 @@
-# Mental-Space 🧠​🌌​
+# Mental-Space 🧠​🌌​  - DEPLOY TEMPORARIAMENTE PARALIZADO DEVIDO A LIMITE DE BANCO DE DADOS.
 
 ## Tecnologias utilizadas 👾​
 
